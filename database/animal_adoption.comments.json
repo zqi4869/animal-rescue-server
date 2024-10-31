@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "6721dd85902d55296963b6e6"
+  },
+  "user_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "article_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "comment": "测试评论",
+  "create_time": {
+    "$date": "2021-01-01T04:00:00.000Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+},
+{
+  "_id": {
+    "$oid": "6721dddd1ac6d74cce6e8edf"
+  },
+  "user_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "article_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "comment": "测试评论",
+  "create_time": {
+    "$date": "2024-10-23T00:00:00.000Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+}]
