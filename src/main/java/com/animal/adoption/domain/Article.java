@@ -11,9 +11,9 @@ import java.util.Date;
 @Data
 public class Article {
     @Id
-    private ObjectId id;
+    private String id;
     private String title;
-    private ObjectId user_id;
+    private String user_id;
     private String content;
     private String img_url;
     private Integer like_num;

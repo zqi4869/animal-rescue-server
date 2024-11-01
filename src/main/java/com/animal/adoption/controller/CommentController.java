@@ -1,5 +1,6 @@
 package com.animal.adoption.controller;
 
+import com.animal.adoption.domain.Article;
 import com.animal.adoption.domain.Comment;
 import com.animal.adoption.service.CommentService;
 import com.animal.adoption.utils.RestResult;
@@ -16,8 +17,8 @@ public class CommentController {
     private CommentService commentService;
 
     @GetMapping("/all")
-    public List<Comment> findAll(String articleId) {
-        return commentService.findAll(articleId);
+    public RestResult findAll(String articleId) {
+        return RestResult.success(commentService.findAll(articleId));
     }
 
     @PostMapping("/save")

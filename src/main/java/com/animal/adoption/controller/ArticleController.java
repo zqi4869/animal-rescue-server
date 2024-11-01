@@ -1,11 +1,10 @@
 package com.animal.adoption.controller;
 
+import com.animal.adoption.domain.Article;
 import com.animal.adoption.service.ArticleService;
 import com.animal.adoption.utils.RestResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/article")
@@ -18,4 +17,9 @@ public class ArticleController {
         return RestResult.success(articleService.findAll());
     }
 
+    @PutMapping("/like")
+    public RestResult likeIncrease(@RequestBody Article article) {
+        articleService.likeIncrease(article.getId());
+        return RestResult.success();
+    }
 }

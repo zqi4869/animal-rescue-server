@@ -11,11 +11,11 @@ import java.util.Date;
 @Data
 public class Comment extends BaseDomain{
     @Id
-    private ObjectId id;
-    private ObjectId user_id;
-    private ObjectId article_id;
+    private String id;
+    private String user_id;
+    private String article_id;
     private String comment;
-    private Date create_time;
+    private Date create_time = new Date();
 
     private User user;
 }

@@ -14,6 +14,10 @@ public class RestResult {
         this.data = data;
     }
 
+    public static RestResult success() {
+        return new RestResult(0, "success", null);
+    }
+
     public static RestResult success(Object data) {
         return new RestResult(0, "success", data);
     }
