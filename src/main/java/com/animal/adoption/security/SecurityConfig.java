@@ -39,6 +39,7 @@ public class SecurityConfig {
                         .requestMatchers(antMatcher("/logout")).permitAll()
                         .requestMatchers(antMatcher("/**")).permitAll() // TODO: 调试放开
                         .requestMatchers(antMatcher("/**/*.html")).permitAll()
+                        .requestMatchers(antMatcher("/**/*.png")).permitAll()
                         .anyRequest().authenticated()
                 )
                 .logout(logout -> logout.logoutRequestMatcher(antMatcher("/logout"))) // auto logout when matching /logout
