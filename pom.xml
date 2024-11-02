@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bookstore</groupId>
-    <artifactId>animal-adoption</artifactId>
+    <artifactId>animal-rescue-server</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 

@@ -12,13 +12,23 @@ import java.util.Date;
 public class Article {
     @Id
     private String id;
-    private String title;
-    private String user_id;
-    private String content;
-    private String img_url;
-    private Integer like_num;
-    private Integer comment_num;
-    private Date create_time;
+    private ObjectId user_id;
+    private String title = "";
+    private String content = "";
+    private String img_url = "";
+    private Integer like_num = 0;
+    private Integer comment_num = 0;
+    private Date create_time = new Date();
 
     private User user;
+    private String userId;
+
+    public String getUserId() {
+        return user_id.toHexString();
+    }
+
+    public void setUserId(String userId) {
+        this.user_id = new ObjectId(userId);
+        this.userId = userId;
+    }
 }

@@ -3,6 +3,7 @@ package com.animal.adoption.controller;
 import com.animal.adoption.domain.Adoption;
 import com.animal.adoption.domain.User;
 import com.animal.adoption.service.AdoptionService;
+import com.animal.adoption.service.AnimalService;
 import com.animal.adoption.service.UserService;
 import com.animal.adoption.utils.RestResult;
 import jakarta.annotation.Resource;
@@ -18,10 +19,14 @@ import java.util.List;
 public class AdoptionController {
     @Autowired
     private AdoptionService adoptionService;
+    @Autowired
+    private AnimalService animalService;
 
-    @GetMapping("/apply")
-    public RestResult apply(Adoption adoption) {
-        return RestResult.success(adoptionService.save(adoption));
+    @PostMapping("/save")
+    public RestResult save(@RequestBody Adoption adoption) {
+        animalService.updateAdoptedTrue(adoption.getAnimalId());
+        adoptionService.save(adoption);
+        return RestResult.success();
     }
 
 }

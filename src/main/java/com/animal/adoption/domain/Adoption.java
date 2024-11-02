@@ -13,10 +13,30 @@ import java.util.List;
 @Data
 public class Adoption {
     @Id
-    private ObjectId id;
+    private String id;
     private ObjectId user_id;
     private ObjectId animal_id;
-    private Date create_time;
+    private Date create_time = new Date();
 
     private List<Animal> animalList;
+    private String userId;
+    private String animalId;
+
+    public String getAnimalId() {
+        return animal_id.toHexString();
+    }
+
+    public void setAnimalId(String animalId) {
+        this.animal_id = new ObjectId(animalId);
+        this.animalId = animalId;
+    }
+
+    public String getUserId() {
+        return user_id.toHexString();
+    }
+
+    public void setUserId(String userId) {
+        this.user_id = new ObjectId(userId);
+        this.userId = userId;
+    }
 }

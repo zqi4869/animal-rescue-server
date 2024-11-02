@@ -23,7 +23,7 @@ public class RequestAuthorizationFilter extends OncePerRequestFilter {
         String header = request.getHeader(JwtUtil.TOKEN_HEADER);
         System.out.println("Authorization Header is: " + header);
 
-        if (header == null || !header.startsWith("Bearer")) {
+        if (header == null || !header.startsWith("Bearer") || header.equals("Bearer")) {
             chain.doFilter(request, response);
             return;
         }

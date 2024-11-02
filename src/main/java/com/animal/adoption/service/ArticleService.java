@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ArticleService {
@@ -24,11 +23,24 @@ public class ArticleService {
         return articleRepository.findAll();
     }
 
-    public void likeIncrease(String id) {
+    public Article save(Article article) {
+        return articleRepository.save(article);
+    }
+
+    public void likeIncr(String id) {
         Article article = articleRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Article not found"));
 
         Query query = new Query(Criteria.where("_id").is(id));
         Update update = new Update().set("like_num", article.getLike_num() + 1);
+
+        mongoTemplate.updateFirst(query, update, Article.class);
+    }
+
+    public void commentNumIncr(String id) {
+        Article article = articleRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Article not found"));
+
+        Query query = new Query(Criteria.where("_id").is(id));
+        Update update = new Update().set("comment_num", article.getComment_num() + 1);
 
         mongoTemplate.updateFirst(query, update, Article.class);
     }
