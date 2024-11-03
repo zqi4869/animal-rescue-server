@@ -1,6 +1,15 @@
+upload:
+  path: E:/temp/
 spring:
   application:
     name: AnimalAdoption
   data:
     mongodb:
       uri: mongodb://localhost:27017/animal_adoption
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+  web:
+    resources:
+      static-locations: classpath:/static/,classpath:/public/,file:${upload.path}

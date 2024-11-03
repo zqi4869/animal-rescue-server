@@ -10,7 +10,8 @@ import java.util.List;
 public interface AdoptionRepository extends MongoRepository<Adoption, String> {
 
     @Aggregation(pipeline = {
-            "{$lookup:{from: 'animals',localField: 'animal_id',foreignField: '_id',as: 'animalList'}}",
+            "{$lookup:{from: 'animals',localField: 'animal_id',foreignField: '_id',as: 'animal'}}",
+            "{$unwind:{path: '$animal'}}",
             "{$match:{user_id: ?0}}"
     })
     List<Adoption> findMyAdoptions(ObjectId userId);

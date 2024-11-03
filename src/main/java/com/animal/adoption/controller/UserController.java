@@ -1,12 +1,19 @@
 package com.animal.adoption.controller;
 
+import com.animal.adoption.domain.ImageFile;
 import com.animal.adoption.domain.User;
 import com.animal.adoption.service.UserService;
 import com.animal.adoption.utils.RestResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Base64;
 import java.util.List;
 
 @RestController
@@ -14,6 +21,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Value("${upload.path}")
+    public String uploadPath;
 
     @GetMapping("/info")
     public RestResult getInfo(String username) {
@@ -36,5 +45,15 @@ public class UserController {
     public String deleteUser(@PathVariable("id") String id) {
         userService.deleteUser(id);
         return "";
+    }
+
+    @PostMapping("/upload")
+    public RestResult upload(@RequestBody ImageFile image) {
+        try {
+            return RestResult.success(image.saveToFile(uploadPath));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RestResult.error("Failed to upload file");
+        }
     }
 }

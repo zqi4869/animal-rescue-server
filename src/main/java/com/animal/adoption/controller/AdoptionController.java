@@ -29,4 +29,9 @@ public class AdoptionController {
         return RestResult.success();
     }
 
+    @GetMapping("/all")
+    public RestResult all(String userId) {
+        return RestResult.success(adoptionService.findMyAdoptions(userId));
+    }
+
 }

@@ -18,7 +18,7 @@ public class Adoption {
     private ObjectId animal_id;
     private Date create_time = new Date();
 
-    private List<Animal> animalList;
+    private Animal animal;
     private String userId;
     private String animalId;
 
