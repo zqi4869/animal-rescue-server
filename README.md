@@ -1,7 +1,6 @@
 # Animal Adoption API
 
-+ 权限管理
 + MongoDB
 + jwt
-+ 
++ Add image upload interface
 
