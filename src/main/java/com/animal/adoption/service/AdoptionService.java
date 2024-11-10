@@ -5,6 +5,7 @@ import com.animal.adoption.repository.AdoptionRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -18,6 +19,10 @@ public class AdoptionService {
     }
 
     public List<Adoption> findMyAdoptions(String userId) {
-        return adoptionRepository.findMyAdoptions(new ObjectId(userId));
+        if(StringUtils.hasText(userId)) {
+            return adoptionRepository.findMyAdoptions(new ObjectId(userId));
+        } else {
+            return adoptionRepository.findAllAdoptions();
+        }
     }
 }

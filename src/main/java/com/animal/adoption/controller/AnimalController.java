@@ -13,9 +13,13 @@ public class AnimalController {
     @Autowired
     private AnimalService animalService;
 
-    @GetMapping("/all")
+    @GetMapping("/unAdopt/list")
     public RestResult findUnAdoptAnimals() {
         return RestResult.success(animalService.findUnAdoptAnimals());
     }
 
+    @GetMapping("/all")
+    public RestResult findAll() {
+        return RestResult.success(animalService.findAll());
+    }
 }

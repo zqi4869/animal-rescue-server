@@ -15,6 +15,14 @@ public interface AdoptionRepository extends MongoRepository<Adoption, String> {
             "{$match:{user_id: ?0}}"
     })
     List<Adoption> findMyAdoptions(ObjectId userId);
+
+    @Aggregation(pipeline = {
+            "{$lookup:{from: 'animals',localField: 'animal_id',foreignField: '_id',as: 'animal'}}",
+            "{$lookup:{from: 'users',localField: 'user_id',foreignField: '_id',as: 'user'}}",
+            "{$unwind:{path: '$user'}}",
+            "{$unwind:{path: '$animal'}}"
+    })
+    List<Adoption> findAllAdoptions();
 }
 
 

@@ -25,6 +25,10 @@ public class AnimalService {
         return animalRepository.findAllByAdopted(false);
     }
 
+    public List<Animal> findAll() {
+        return animalRepository.findAll();
+    }
+
     public void updateAdoptedTrue(String id) {
         Animal animal = animalRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Article not found"));
 
