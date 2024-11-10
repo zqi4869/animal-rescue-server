@@ -26,6 +26,9 @@ public class LoginUserDetails implements UserDetailsService {
 //                username,
 //                user.getPassword(),
 //        		AuthorityUtils.createAuthorityList(user.getRole()));
+        if(user == null) {
+            throw new UsernameNotFoundException("User not found with username: " + username);
+        }
         System.out.println("User found from database, username=" + user.getUsername());
         return new LoginUser(user);
     }

@@ -29,6 +29,14 @@ public class AnimalService {
         return animalRepository.findAll();
     }
 
+    public Animal save(Animal animal) {
+        return animalRepository.save(animal);
+    }
+
+    public void deleteById(String id) {
+        animalRepository.deleteById(id);
+    }
+
     public void updateAdoptedTrue(String id) {
         Animal animal = animalRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Article not found"));
 

@@ -15,6 +15,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Objects;
+
 @RestController
 @RequestMapping("/")
 public class LoginController {
@@ -30,6 +32,10 @@ public class LoginController {
             authResult = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
             LoginUser loginUser = (LoginUser) authResult.getPrincipal();
 
+            if(!Objects.equals(user.getRole(), loginUser.getUser().getRole())) {
+                return RestResult.error("Username or password is incorrect");
+            }
+
             for (GrantedAuthority authority : loginUser.getAuthorities()) {
                 System.out.println("role: " + authority.getAuthority());
             }
@@ -43,6 +49,7 @@ public class LoginController {
             e.printStackTrace();
             if (e instanceof BadCredentialsException) {
                 System.out.println("username or password is incorrect");
+                return RestResult.error("username or password is incorrect");
             }
         }
         return RestResult.error("login failed");

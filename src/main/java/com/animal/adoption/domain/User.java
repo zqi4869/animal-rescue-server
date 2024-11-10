@@ -12,6 +12,7 @@ public class User {
     private String id;
     private String username;
     private String password;
+    private String newPassword;
     private String role = "user";
     private String avatar = "";
     private String first_name = "";
@@ -19,4 +20,5 @@ public class User {
     private String phone = "";
     private String address = "";
     private String city = "";
+
 }

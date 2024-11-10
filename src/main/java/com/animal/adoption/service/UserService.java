@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -29,6 +30,15 @@ public class UserService {
     public User save(User user) {
         String encodePwd = new BCryptPasswordEncoder().encode(user.getPassword());
         user.setPassword(encodePwd);
+        return userRepository.save(user);
+    }
+
+    public User update(User user) {
+        if(StringUtils.hasText(user.getNewPassword())) {
+            String encodePwd = new BCryptPasswordEncoder().encode(user.getNewPassword());
+            user.setPassword(encodePwd);
+        }
+
         return userRepository.save(user);
     }
 

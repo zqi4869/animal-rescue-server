@@ -40,6 +40,11 @@ public class UserController {
         return RestResult.success(userService.save(user));
     }
 
+    @PutMapping("/update")
+    public RestResult update(@RequestBody User user) {
+        return RestResult.success(userService.update(user));
+    }
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('admin')")
     public String deleteUser(@PathVariable("id") String id) {
@@ -48,9 +53,21 @@ public class UserController {
     }
 
     @PostMapping("/upload")
-    public RestResult upload(@RequestBody ImageFile image) {
+    public RestResult mobileUpload(@RequestBody ImageFile image) {
         try {
             return RestResult.success(image.saveToFile(uploadPath));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RestResult.error("Failed to upload file");
+        }
+    }
+
+    @PostMapping("/pc/upload")
+    public RestResult pcUpload(@RequestParam("file") MultipartFile myfile) {
+        try {
+            String name = System.currentTimeMillis() + myfile.getOriginalFilename().substring(myfile.getOriginalFilename().indexOf("."));
+            myfile.transferTo(new File(uploadPath + name));
+            return RestResult.success(name);
         } catch (Exception e) {
             e.printStackTrace();
             return RestResult.error("Failed to upload file");
