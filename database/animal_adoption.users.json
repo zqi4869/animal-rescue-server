@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "67204b25ea8893dbf002d4a2"
+  },
+  "username": "admin",
+  "password": "$2a$10$2c4DBC9y3POUTSQ.RwG11ewABGVXabVs6IDFlZspd95CkKmnNSYKe",
+  "role": "admin",
+  "avatar": "avatar-1.png",
+  "first_name": "Admin",
+  "last_name": " ",
+  "phone": "1101-2211",
+  "address": "Road 204-1",
+  "city": "Turku",
+  "_class": "com.animal.adoption.domain.User"
+},
+{
+  "_id": {
+    "$oid": "6720a3efea8893dbf002d4aa"
+  },
+  "password": "$2a$10$2c4DBC9y3POUTSQ.RwG11ewABGVXabVs6IDFlZspd95CkKmnNSYKe",
+  "username": "1",
+  "role": "user",
+  "address": "123",
+  "city": "New York",
+  "first_name": "Oliver",
+  "last_name": "Smith",
+  "phone": "21112231",
+  "avatar": "avatar-1.png"
+},
+{
+  "_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "password": "$2a$10$2c4DBC9y3POUTSQ.RwG11ewABGVXabVs6IDFlZspd95CkKmnNSYKe",
+  "username": "2",
+  "role": "user",
+  "address": "123",
+  "city": "Turku",
+  "first_name": "Emma",
+  "last_name": "Watson",
+  "phone": "21112231",
+  "avatar": "avatar-1.png"
+}]
