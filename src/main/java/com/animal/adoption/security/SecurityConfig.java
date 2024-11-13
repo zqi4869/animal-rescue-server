@@ -40,7 +40,7 @@ public class SecurityConfig {
                         .requestMatchers(antMatcher("/**")).permitAll() // TODO: 调试放开
                         .requestMatchers(antMatcher("/**/*.html")).permitAll()
                         .requestMatchers(antMatcher("/**/*.png")).permitAll()
-                        .anyRequest().authenticated()
+//                        .anyRequest().authenticated()
                 )
                 .logout(logout -> logout.logoutRequestMatcher(antMatcher("/logout"))) // auto logout when matching /logout
                 .csrf(AbstractHttpConfigurer::disable)
