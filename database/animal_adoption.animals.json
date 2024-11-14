@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6720a282ea8893dbf002d4a4"
+  },
+  "gender": "Male",
+  "name": "Small kity",
+  "no": "100001",
+  "age": "3 months",
+  "city": "Helsinki",
+  "label": "Home adoption#Gentle in temperament",
+  "remark": "The litter of a domestic cat.",
+  "story": "It is gentle and can eat and sleep on its own. It likes to play, likes to play with children and likes to play with other kitts.It likes to play, likes to play with children and likes to play with other kitts.I've had both cats and dogs, and each has taught me something different about love, patience, and companionship. They truly are a gift. ",
+  "cover_url": "animal-1.png",
+  "story_img_url": "animal-1.png",
+  "adopted": false
+},
+{
+  "_id": {
+    "$oid": "6724c0c7e992bd1d4b655ce8"
+  },
+  "name": "small white",
+  "gender": "Male",
+  "no": "100002",
+  "age": "4 months",
+  "city": "Espoo",
+  "label": "Home adoption#Short hair",
+  "remark": "The litter of a domestic cat.",
+  "story": " It's smart and cute, cute and you want to hold it up and kiss. ",
+  "cover_url": "animal-2.jpg",
+  "story_img_url": "animal-2.jpg",
+  "adopted": false,
+  "_class": "com.animal.adoption.domain.Animal"
+}]
