@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "6721a2afee78e56cd9e71d70"
+  },
+  "animal_id": {
+    "$oid": "6720a282ea8893dbf002d4a4"
+  },
+  "create_time": {
+    "$date": "2024-05-05T00:00:00.000Z"
+  },
+  "user_id": {
+    "$oid": "6720a3efea8893dbf002d411"
+  }
+},
+{
+  "_id": {
+    "$oid": "6725eec130233f3579d42d87"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "animal_id": {
+    "$oid": "6724c0c7e992bd1d4b655ce8"
+  },
+  "_class": "com.animal.adoption.domain.Adoption"
+},
+{
+  "_id": {
+    "$oid": "6726d3eb69a142258643bc16"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "animal_id": {
+    "$oid": "6720a282ea8893dbf002d4a4"
+  },
+  "_class": "com.animal.adoption.domain.Adoption"
+},
+{
+  "_id": {
+    "$oid": "672a0b6800bc31121ee794bd"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "animal_id": {
+    "$oid": "6724c0c7e992bd1d4b655ce8"
+  },
+  "create_time": {
+    "$date": "2024-11-05T12:11:20.286Z"
+  },
+  "_class": "com.animal.adoption.domain.Adoption"
+},
+{
+  "_id": {
+    "$oid": "6734a1279246b01147c2dea7"
+  },
+  "user_id": {
+    "$oid": "6720a3efea8893dbf002d4aa"
+  },
+  "animal_id": {
+    "$oid": "6720a282ea8893dbf002d4a4"
+  },
+  "create_time": {
+    "$date": "2024-11-13T12:52:55.131Z"
+  },
+  "_class": "com.animal.adoption.domain.Adoption"
+}]
