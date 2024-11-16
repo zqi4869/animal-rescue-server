@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "title": "My like",
+  "user_id": {
+    "$oid": "6720a3efea8893dbf002d4aa"
+  },
+  "content": "I love how graceful and agile cats are. Watching them leap and land with perfect balance never fails to amaze m",
+  "img_url": "article-1.png",
+  "like_num": 45,
+  "comment_num": 4,
+  "create_time": {
+    "$date": "2024-01-01T00:00:00.000Z"
+  },
+  "_class": "com.animal.adoption.domain.Article"
+},
+{
+  "_id": {
+    "$oid": "6725e57880be210b90a20599"
+  },
+  "title": "Hello cute cat",
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "content": "Cats are such mysterious creatures. Their eyes seem to hold secrets, and their purrs are like nature's stress relievers.",
+  "img_url": "111.jpg",
+  "like_num": 0,
+  "comment_num": 0,
+  "create_time": {
+    "$date": "2024-11-02T08:40:24.077Z"
+  },
+  "_class": "com.animal.adoption.domain.Article"
+},
+{
+  "_id": {
+    "$oid": "672a0b4700bc31121ee794bb"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "title": "About cat",
+  "content": "Cats have such a unique personality; they can be so independent yet so affectionate when they want to be. My cat always knows when I need a little comfort and curls up next to me.",
+  "img_url": "1730808643400.jpg",
+  "like_num": 1,
+  "comment_num": 1,
+  "create_time": {
+    "$date": "2024-11-05T12:10:47.667Z"
+  },
+  "_class": "com.animal.adoption.domain.Article"
+}]
