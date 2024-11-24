@@ -14,5 +14,6 @@ Before you begin, ensure that you have the following installed on your system:
 + MongoDB
 + RESTful API
 + jwt
-+ Add image upload interface
++ Spring boot
++ Spring security
 
