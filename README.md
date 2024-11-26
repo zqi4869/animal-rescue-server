@@ -9,11 +9,10 @@ Before you begin, ensure that you have the following installed on your system:
 + Git
 + IntelliJ IDEA or VS Code with the necessary plugins for Java and Spring Boot.
 
-# Animal Adoption API
+# Main dependency librarys
 
-+ MongoDB
-+ RESTful API
-+ jwt
-+ Spring boot
-+ Spring security
-
++ lombok
++ jjwt
++ spring-boot-starter-security
++ spring-boot-starter-data-mongodb
++ spring-boot-starter-web
