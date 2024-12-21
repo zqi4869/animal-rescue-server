@@ -28,4 +28,9 @@ public class CommentController {
         return RestResult.success();
     }
 
+    @PostMapping("/delete")
+    public RestResult delete(@RequestBody Comment comment) {
+        commentService.delete(comment);
+        return RestResult.success();
+    }
 }

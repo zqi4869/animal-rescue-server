@@ -28,4 +28,10 @@ public class ArticleController {
     public RestResult save(@RequestBody Article article) {
         return RestResult.success(articleService.save(article));
     }
+
+    @PostMapping("/delete")
+    public RestResult delete(@RequestBody Article article) {
+        articleService.delete(article);
+        return RestResult.success();
+    }
 }

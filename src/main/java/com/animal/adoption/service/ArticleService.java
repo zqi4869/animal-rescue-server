@@ -27,6 +27,10 @@ public class ArticleService {
         return articleRepository.save(article);
     }
 
+    public void delete(Article article) {
+        articleRepository.deleteById(article.getId());
+    }
+
     public void likeIncr(String id) {
         Article article = articleRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Article not found"));
 
