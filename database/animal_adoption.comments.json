@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "6721dd85902d55296963b6e6"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "article_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "comment": "测试评论",
+  "create_time": {
+    "$date": "2021-01-01T04:00:00.000Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+},
+{
+  "_id": {
+    "$oid": "6721dddd1ac6d74cce6e8edf"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "article_id": {
+    "$oid": "6720a617ea8893dbf002d4c1"
+  },
+  "comment": "测试评论",
+  "create_time": {
+    "$date": "2024-10-23T00:00:00.000Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+},
+{
+  "_id": {
+    "$oid": "6725d84e5afe74511adda636"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "article_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "comment": "333",
+  "create_time": {
+    "$date": "2024-11-02T07:44:14.443Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+},
+{
+  "_id": {
+    "$oid": "6725d9455afe74511adda637"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "article_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "comment": "33333333",
+  "create_time": {
+    "$date": "2024-11-02T07:48:21.908Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+},
+{
+  "_id": {
+    "$oid": "6725da145afe74511adda638"
+  },
+  "user_id": {
+    "$oid": "6721c5f4ee78e56cd9e71d81"
+  },
+  "article_id": {
+    "$oid": "6720a617ea8893dbf002d4c0"
+  },
+  "comment": "333333333333333",
+  "create_time": {
+    "$date": "2024-11-02T07:51:48.824Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+},
+{
+  "_id": {
+    "$oid": "672a0b5d00bc31121ee794bc"
+  },
+  "user_id": {
+    "$oid": "6720a3efea8893dbf002d4aa"
+  },
+  "article_id": {
+    "$oid": "672a0b4700bc31121ee794bb"
+  },
+  "comment": "reply it",
+  "create_time": {
+    "$date": "2024-11-05T12:11:09.481Z"
+  },
+  "_class": "com.animal.adoption.domain.Comment"
+}]
